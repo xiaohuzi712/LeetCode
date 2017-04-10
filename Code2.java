@@ -75,9 +75,12 @@ public class Code2 {
         int[] list2 = {8,2,5,2};
         Code2 node1 = new Code2();
         Code2 node2 = new Code2();
-        ListNode head1 =  node1.buildList(list1);
-        ListNode head2 =  node2.buildList(list2);
-        ListNode reusult = node2.addTwoNumbers(head1, head2);
+        //创建单链表1
+        ListNode singleList1 =  node1.buildList(list1);
+        //定义单链表2
+        ListNode singleList2 =  node2.buildList(list2);
+        ListNode reusult = node2.addTwoNumbers(singleList1, singleList2);
+        //打印输出链表
         while (reusult!=null){
             System.out.print(reusult.val+"->");
             reusult = reusult.next;
